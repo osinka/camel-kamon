@@ -10,7 +10,7 @@ libraryDependencies += "com.osinka.camel" %% "camel-kamon" % "1.0.0-SNAPSHOT"
 
 ## Usage in Camel
 
-Unlike Kamon modules, this is a library that needs to be configured implicitly.
+Unlike Kamon modules, this is a library that needs explicit configuration.
 
 In Spring configuration:
 
