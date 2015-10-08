@@ -18,9 +18,9 @@ scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
 testOptions in Test += Tests.Argument(TestFrameworks.JUnit, "+q", "-v")
 
-val CamelVer = "2.15.0"
+val CamelVer = "2.15.3"
 
-val KamonVer = "0.5.1"
+val KamonVer = "0.5.2"
 
 libraryDependencies ++= Seq(
   "org.apache.camel"          %  "camel-core"             % CamelVer,
