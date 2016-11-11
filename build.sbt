@@ -6,7 +6,7 @@ homepage := Some(url("https://github.com/osinka/camel-kamon"))
 
 startYear := Some(2015)
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
@@ -18,18 +18,18 @@ scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
 testOptions in Test += Tests.Argument(TestFrameworks.JUnit, "+q", "-v")
 
-val CamelVer = "2.17.0"
+val CamelVer = "2.18.0"
 
-val KamonVer = "0.6.0"
+val KamonVer = "0.6.3"
 
 libraryDependencies ++= Seq(
   "org.apache.camel"          %  "camel-core"             % CamelVer,
   "io.kamon"                  %% "kamon-core"             % KamonVer,
-  "org.scalatest"             %% "scalatest"              % "2.2.5"   % "test",
+  "org.scalatest"             %% "scalatest"              % "3.0.1"   % "test",
   "com.novocode"              %  "junit-interface"        % "0.11"    % "test",
   "org.apache.camel"          %  "camel-test"             % CamelVer  % "test",
   "io.kamon"                  %% "kamon-log-reporter"     % KamonVer  % "test",
-  "org.slf4j"                 %  "slf4j-simple"           % "1.7.12"  % "test"
+  "org.slf4j"                 %  "slf4j-simple"           % "1.7.21"  % "test"
 )
 
 credentials += Credentials(Path.userHome / ".ivy2/credentials_sonatype")
