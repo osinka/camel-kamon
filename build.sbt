@@ -8,6 +8,8 @@ startYear := Some(2015)
 
 scalaVersion := "2.11.8"
 
+crossScalaVersions := Seq("2.11.8", "2.12.1")
+
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
 organizationName := "Osinka"
@@ -18,9 +20,9 @@ scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
 testOptions in Test += Tests.Argument(TestFrameworks.JUnit, "+q", "-v")
 
-val CamelVer = "2.18.0"
+val CamelVer = "2.18.1"
 
-val KamonVer = "0.6.3"
+val KamonVer = "0.6.5"
 
 libraryDependencies ++= Seq(
   "org.apache.camel"          %  "camel-core"             % CamelVer,
@@ -29,7 +31,7 @@ libraryDependencies ++= Seq(
   "com.novocode"              %  "junit-interface"        % "0.11"    % "test",
   "org.apache.camel"          %  "camel-test"             % CamelVer  % "test",
   "io.kamon"                  %% "kamon-log-reporter"     % KamonVer  % "test",
-  "org.slf4j"                 %  "slf4j-simple"           % "1.7.21"  % "test"
+  "org.slf4j"                 %  "slf4j-simple"           % "1.7.22"  % "test"
 )
 
 credentials += Credentials(Path.userHome / ".ivy2/credentials_sonatype")
